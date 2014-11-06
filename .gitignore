@@ -10,22 +10,10 @@
 
 *.patch
 
-/*.html
-
 .DS_Store
 
 .bower.json
 
-.sizecache.json
-
 npm-debug.log
 
 node_modules/*
-
-server/node_modules/*
-
-client/node_modules/*
-
-public/*
-
-bower_components/*

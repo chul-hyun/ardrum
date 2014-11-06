@@ -12,7 +12,8 @@ var io = require('socket.io')(http);
 
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+//app.set('view engine', 'html');
+//app.set('views', path.join(__dirname, 'views'));
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
@@ -55,13 +56,14 @@ app.use(function(err, req, res, next) {
 var led_sensor = require('./sensor/led.js');
 var btn_sensor = require('./sensor/btn.js');
 
-var arduino = require('duino');
+var arduino = require('./duino');
 
 var board = new arduino.Board({
     //debug: true
 });
 
 board.on('ready', function(){
+    console.log('board-ready');
      btn_sensor(io, arduino, board, 2);
      btn_sensor(io, arduino, board, 3);
      btn_sensor(io, arduino, board, 4);
