@@ -55,6 +55,7 @@ app.use(function(err, req, res, next) {
 
 var led_sensor = require('./sensor/led.js');
 var btn_sensor = require('./sensor/btn.js');
+var gyr_sensor = require('./sensor/gyr.js');
 
 var arduino = require('./duino');
 
@@ -63,15 +64,19 @@ var board = new arduino.Board({
 });
 
 board.on('ready', function(){
+    
     console.log('board-ready');
+    
      btn_sensor(io, arduino, board, 2);
      btn_sensor(io, arduino, board, 3);
      btn_sensor(io, arduino, board, 4);
      btn_sensor(io, arduino, board, 5);
+     gyr_sensor(io, arduino, board, 6);
+    
     io.sockets.on('connection', function (socket) {
         console.log('connection');
     });
-
+    
 });
 
 board.on('connected', function(){

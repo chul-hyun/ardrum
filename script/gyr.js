@@ -1,6 +1,6 @@
 define(['jquery'],function($){
-	function btn(socket, drum, pin){
-		console.log('drum set '+pin+'pin');
+	function gyr(socket, drum, pin){
+		console.log('gry set '+pin+'pin');
 		socket.on('down', function(data){
 			if(data.pin === pin){
 				drum.pause();
@@ -10,5 +10,5 @@ define(['jquery'],function($){
 		})
 	}
 
-	return btn;
+	return gyr;
 });
