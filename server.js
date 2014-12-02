@@ -57,7 +57,7 @@ var led_sensor = require('./sensor/led.js');
 var btn_sensor = require('./sensor/btn.js');
 var gyr_sensor = require('./sensor/gyr.js');
 
-var arduino = require('./duino');
+var arduino = require('duino');
 
 var board = new arduino.Board({
     //debug: true
