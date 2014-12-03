@@ -67,11 +67,11 @@ board.on('ready', function(){
     
     console.log('board-ready');
     
-     btn_sensor(io, arduino, board, 2);
+     gyr_sensor(io, arduino, board, 2);
      btn_sensor(io, arduino, board, 3);
      btn_sensor(io, arduino, board, 4);
      btn_sensor(io, arduino, board, 5);
-     gyr_sensor(io, arduino, board, 6);
+     btn_sensor(io, arduino, board, 6);
     
     io.sockets.on('connection', function (socket) {
         console.log('connection');
