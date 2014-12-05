@@ -5,24 +5,44 @@
 	<title>test</title>
 </head>
 <body>
-	<section id="drum_set1">
-		<audio controls preload>
-			<source src="music/drum1.mp3" type="audio/mpeg">
-		</audio>
-		<audio controls preload>
-			<source src="music/drum2.mp3" type="audio/mpeg">
-		</audio>
-		<audio controls preload>
-			<source src="music/drum3.mp3" type="audio/mpeg">
-		</audio>
-		<audio controls preload>
-			<source src="music/drum4.mp3" type="audio/mpeg">
+	<section id="drum_set2">
+		<audio controls preload name="sensor1">
+			<source src="music/1.mp3" type="audio/mpeg">
 		</audio>
 	</section>
-	<section id="drum_set2">
-		<audio controls preload>
-			<source src="music/drum5.mp3" type="audio/mpeg">
+
+	<section id="drum_set1">
+		<audio controls preload name="sensor2">
+			<source src="music/36.mp3" type="audio/mpeg">
 		</audio>
+		<audio controls preload name="sensor3">
+			<source src="music/3.mp3" type="audio/mpeg">
+		</audio>
+		<audio controls preload name="sensor4">
+			<source src="music/9.mp3" type="audio/mpeg">
+		</audio>
+		<audio controls preload name="sensor5">
+			<source src="music/10.mp3" type="audio/mpeg">
+		</audio>
+	</section>
+	
+	<section id="option">
+		<h1>Option</h1>
+		sensor 1:
+		<select id="sensor1" class="sensor_select">
+		</select><br/>
+		sensor 2:
+		<select id="sensor2" class="sensor_select">
+		</select><br/>
+		sensor 3:
+		<select id="sensor3" class="sensor_select">
+		</select><br/>
+		sensor 4:
+		<select id="sensor4" class="sensor_select">
+		</select><br/>
+		sensor 5:
+		<select id="sensor5" class="sensor_select">
+		</select><br/>
 	</section>
 	<script data-main="script/main" src="../node_modules/requirejs/require.js"></script>
 </body>

@@ -1,11 +1,11 @@
 define(['jquery'],function($){
-	function gyr(socket, drum, pin){
+	function gyr(socket, gyr, pin){
 		console.log('gry set '+pin+'pin');
 		socket.on('down', function(data){
 			if(data.pin === pin){
-				drum.pause();
-				drum.currentTime = 0;
-				drum.play();
+				gyr.pause();
+				gyr.currentTime = 0;
+				gyr.play();
 			}
 		})
 	}

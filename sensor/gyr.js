@@ -17,7 +17,7 @@ function app(socket, arduino, board, pin){
 			console.log('gyr down~!!');
 		}
 	});
-	console.log(pin+'pin gyr init');
+	console.log(pin+'pin gyr ready');
 }
 
 function getNow(){

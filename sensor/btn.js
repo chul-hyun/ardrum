@@ -9,7 +9,7 @@ function app(socket, arduino, board, pin){
 		console.log(pin+'btn down~!!');
 		socket.emit('down', {pin: pin});
 	});
-	console.log(pin+'pin btn init');
+	console.log(pin+'pin btn ready');
 }
 
 module.exports = app;
