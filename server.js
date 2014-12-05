@@ -61,7 +61,7 @@ app.use(function(err, req, res, next) {
 
 
 //arduino
-/*
+
 var led_sensor = require('./sensor/led.js');
 var btn_sensor = require('./sensor/btn.js');
 var gyr_sensor = require('./sensor/gyr.js');
@@ -88,11 +88,11 @@ board.on('ready', function(){
     
 });
 
-*/
 
-//board.on('connected', function(){
+
+board.on('connected', function(){
     http.listen(3000, function(){
       console.log('listening on *:3000');
     });
-//})
+})
 
